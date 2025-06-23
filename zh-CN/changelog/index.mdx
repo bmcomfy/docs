@@ -1,0 +1,54 @@
+---
+title: "更新日志"
+description: "跟踪 ComfyUI 的最新功能、改进和错误修复"
+icon: "clock-rotate-left"
+---
+
+<Update label="v0.3.41" description="2025年6月17日">
+
+## 更新内容
+
+**Chroma TE & Flux 改进**
+- 让 chroma TE 在常规 flux 上工作
+- 修复某些 flux 模型在 fp16 下的黑色图像问题
+- 修复各种 flux 相关问题
+
+**AMD GPU 增强**
+- 在 gfx1201 上默认启用 fp8 操作
+- 在某些 GPU 上启用 AMD fp8 和 pytorch attention
+
+**Apple Silicon 修复**
+- Apple 很可能永远不会修复 fp16 attention 错误（已实现解决方案）
+
+**新模型支持**
+- 支持 cosmos predict2 文本到图像 2B 和 14B 模型
+- 支持 Cosmos predict2 图像到视频模型
+- 取消 cosmos predict2 分辨率限制并修复内存估算
+- 为 ModelSamplingContinuousEDM 节点添加 cosmos_rflow 选项
+
+**训练 & LoRA**
+- LoRA 训练器：权重适配器方案中的 LoRA 训练节点
+- SaveLora 现在以与所有其他节点相同的文件名格式保存
+
+**开发者功能**
+- 添加对 sqlite 数据库的支持
+- 从 pyproject 自动注册 web 文件夹
+- 允许指定任何前端 semver 后缀
+- 添加 '@prerelease' 以使用最新测试前端
+- 允许从 pyproject.toml 添加额外设置
+
+**错误修复 & 改进**
+- 修复 WebcamCapture IS_CHANGED 签名
+- 修复 Kontext 宽高比仅作为小部件工作的问题
+- 为 ltxv rmsnorm 添加正确的 eps
+- 允许使用 tokenizer_data 设置 min_length
+- 为 RF 泛化 SEEDS 采样器
+- RF 的多步 DPM++ SDE 采样器
+
+### 新贡献者
+- @Olexandr88 首次贡献
+- @kmewhort 首次贡献
+
+**完整更新日志**: [v0.3.40...v0.3.41](https://github.com/comfyanonymous/ComfyUI/compare/v0.3.40...v0.3.41)
+
+</Update>
