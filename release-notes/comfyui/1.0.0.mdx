@@ -1,0 +1,73 @@
+```mdx
+---
+title: "ComfyUI 1.0.0"
+description: "Major milestone release with Cosmos Predict2 integration, enhanced Flux compatibility, and new training tools"
+version: "1.0.0"
+date: "2025-06-23"
+---
+
+<Update type="success" title="Major Milestone Release">
+🎉 ComfyUI has officially reached version 1.0.0! This represents a significant milestone in the project's development.
+</Update>
+
+## New Features
+
+### AI Model Support
+
+<Update type="new">
+**Cosmos Predict2 Integration** - Added comprehensive support for Cosmos predict2 models with both text-to-image and image-to-video generation capabilities.
+</Update>
+
+- **Text-to-image models**: Support for both 2B and 14B variants
+- **Image-to-video generation**: New video generation capabilities through Cosmos models
+
+<Update type="new">
+**Enhanced Flux Compatibility** - Chroma TE now works seamlessly with regular Flux models for improved workflow flexibility.
+</Update>
+
+### Training & Workflow Tools
+
+<Update type="new">
+**LoRA Trainer Node** - Introduced a new LoRA training node using weight adapter scheme for custom model fine-tuning.
+</Update>
+
+<Update type="new">
+**SQLite Database Support** - Added SQLite database integration for improved data management and persistence across sessions.
+</Update>
+
+## Improvements & Bug Fixes
+
+<Update type="fix">
+**WebcamCapture Fix** - Resolved IS_CHANGED signature issue for better webcam integration reliability.
+</Update>
+
+<Update type="improvement">
+**Stability Enhancements** - Various under-the-hood improvements for better performance and reliability across all features.
+</Update>
+
+## Technical Details
+
+| Detail | Value |
+|--------|-------|
+| **Base Version** | v0.3.40 → 1.0.0 |
+| **Target Branch** | master |
+| **Release Date** | June 23, 2025 |
+
+## Migration Notes
+
+<Warning>
+This is a major version release. Please ensure you backup your current workflows and models before upgrading.
+</Warning>
+
+## Additional Resources
+
+- [Full Changelog](https://github.com/comfyanonymous/ComfyUI/compare/v0.3.40...1.0.0)
+- [Migration Guide](#) *(coming soon)*
+- [API Documentation Updates](#) *(coming soon)*
+
+---
+
+<Note>
+This major release represents a significant milestone in ComfyUI's development, bringing enhanced AI model support, new training capabilities, and improved stability for all users.
+</Note>
+```
