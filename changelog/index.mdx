@@ -8,15 +8,48 @@ icon: "clock-rotate-left"
 
 ---
 
-
-
-<Update label="v0.3.41" description="June 17, 2025">
-
-
+<Update label="v3.0.0" description="June 25, 2025">
 
 ## What's Changed
 
+**Major Release Milestone - ComfyUI 3.0.0**
 
+This significant version bump brings powerful new capabilities and foundational improvements to enhance your AI workflow creation experience.
+
+**Enhanced Flux Model Support**
+- **Chroma TE Integration**: Chroma TE now works seamlessly with regular Flux models, expanding your creative possibilities with enhanced text encoding capabilities
+- Better compatibility across different Flux model variants for more reliable workflow execution
+
+**Advanced Video Generation**
+- **Cosmos Predict2 Support**: Full support for Cosmos predict2 models including:
+  - Text-to-image models (2B and 14B parameters) for high-quality image generation
+  - Image-to-video models for creating dynamic video content from static images
+- Enhanced workflow capabilities for video generation pipelines
+
+**Training & Model Customization**
+- **LoRA Trainer Node**: New built-in LoRA training functionality using weight adapter scheme
+- Train custom LoRA models directly within your ComfyUI workflows
+- Streamlined model fine-tuning for personalized AI generation
+
+**Infrastructure Improvements**
+- **SQLite Database Support**: Enhanced data management and workflow persistence
+- Better performance and reliability for complex workflow operations
+- Improved node state management and caching
+
+**Developer & Integration Enhancements**
+- **WebcamCapture Fix**: Resolved IS_CHANGED signature issues for more reliable real-time input workflows
+- Better API consistency for custom node development
+- Enhanced stability for interactive and real-time generation workflows
+
+This major release establishes a strong foundation for advanced AI workflows, bringing professional-grade training capabilities and cutting-edge model support directly into your ComfyUI environment.
+
+**Full Changelog**: [v0.3.40...3.0.0](https://github.com/comfyanonymous/ComfyUI/compare/v0.3.40...3.0.0)
+
+</Update>
+
+<Update label="v0.3.41" description="June 17, 2025">
+
+## What's Changed
 
 **Chroma TE & Flux Improvements**
 
@@ -26,21 +59,15 @@ icon: "clock-rotate-left"
 
 - Alternate fix for various flux-related issues
 
-
-
 **AMD GPU Enhancements**
 
 - Enable fp8 ops by default on gfx1201
 
 - Enable AMD fp8 and pytorch attention on some GPUs
 
-
-
 **Apple Silicon Fixes**
 
 - Apple most likely is never fixing the fp16 attention bug (implemented workaround)
-
-
 
 **New Model Support**
 
@@ -52,15 +79,11 @@ icon: "clock-rotate-left"
 
 - Add cosmos_rflow option to ModelSamplingContinuousEDM node
 
-
-
 **Training & LoRA**
 
 - LoRA Trainer: LoRA training node in weight adapter scheme
 
 - SaveLora now saves in the same filename format as all the other nodes
-
-
 
 **Developer Features**
 
@@ -73,8 +96,6 @@ icon: "clock-rotate-left"
 - Add '@prerelease' to use latest test frontend
 
 - Allow extra settings from pyproject.toml
-
-
 
 **Bug Fixes & Improvements**
 
@@ -90,19 +111,12 @@ icon: "clock-rotate-left"
 
 - Multistep DPM++ SDE samplers for RF
 
-
-
 ### New Contributors
 
 - @Olexandr88 made their first contribution
 
 - @kmewhort made their first contribution
 
-
-
 **Full Changelog**: [v0.3.40...v0.3.41](https://github.com/comfyanonymous/ComfyUI/compare/v0.3.40...v0.3.41)
 
-
-
 </Update>
-
