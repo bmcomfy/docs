@@ -1,20 +1,51 @@
 ---
 title: "更新日志"
-description: "跟踪 ComfyUI 的最新功能、改进和错误修复"
+description: "跟踪 ComfyUI 最新功能、改进和错误修复"
 icon: "clock-rotate-left"
 ---
 
+<Update label="1.0.0" description="2025年6月25日">
+
+## 🎉 ComfyUI 1.0.0 - 重大里程碑版本
+
+**增强的 Flux 工作流**
+- Chroma TE 现已与常规 Flux 模型无缝协作，为您的文本到图像工作流扩展了创作可能性
+- 改进的兼容性确保在不同 Flux 模型变体中获得更可靠的结果
+
+**下一代模型支持**
+- **Cosmos Predict2 集成**：全面支持 2B 和 14B 文本到图像模型，为您的工作流带来尖端的 AI 图像生成功能
+- **视频生成突破**：现已支持 Cosmos Predict2 图像到视频模型，实现无缝的图像到视频转换工作流
+- 针对这些大规模模型的增强模型加载和内存管理
+
+**高级 LoRA 训练**
+- **LoRA Trainer 节点**：革命性的新节点，使用权重适配器方案直接在 ComfyUI 中实现 LoRA 训练
+- 简化了自定义模型适配的训练过程，无需离开您的工作流环境
+- 非常适合希望为特定用例微调模型的研究人员和高级用户
+
+**开发者与数据库增强**
+- **SQLite 集成**：添加了强大的 SQLite 数据库支持，以便更好地进行数据管理和工作流持久化
+- 改进的后端基础设施，用于处理复杂的工作流数据和用户偏好
+
+**体验优化改进**
+- 修复了 WebcamCapture IS_CHANGED 签名，以便更好地处理实时输入
+- 在整个平台上增强了稳定性和性能优化
+
+这个里程碑式的 1.0.0 版本代表了 ComfyUI 功能的重大飞跃，为全球创作者带来了专业级的训练工具、下一代模型支持和增强的工作流可靠性。
+
+**完整更新日志**：[v0.3.40...1.0.0](https://github.com/comfyanonymous/ComfyUI/compare/v0.3.40...1.0.0)
+
+</Update>
 <Update label="v0.3.41" description="2025年6月17日">
 
 ## 更新内容
 
-**Chroma TE & Flux 改进**
+**Chroma TE 和 Flux 改进**
 - 让 chroma TE 在常规 flux 上工作
-- 修复某些 flux 模型在 fp16 下的黑色图像问题
-- 修复各种 flux 相关问题
+- 修复某些 flux 模型在 fp16 下出现黑色图像的问题
+- 针对各种 flux 相关问题的替代修复方案
 
 **AMD GPU 增强**
-- 在 gfx1201 上默认启用 fp8 操作
+- 在 gfx1201 上默认启用 fp8 ops
 - 在某些 GPU 上启用 AMD fp8 和 pytorch attention
 
 **Apple Silicon 修复**
@@ -23,32 +54,32 @@ icon: "clock-rotate-left"
 **新模型支持**
 - 支持 cosmos predict2 文本到图像 2B 和 14B 模型
 - 支持 Cosmos predict2 图像到视频模型
-- 取消 cosmos predict2 分辨率限制并修复内存估算
+- 解除 cosmos predict2 分辨率限制并修复内存估算
 - 为 ModelSamplingContinuousEDM 节点添加 cosmos_rflow 选项
 
-**训练 & LoRA**
-- LoRA 训练器：权重适配器方案中的 LoRA 训练节点
+**训练和 LoRA**
+- LoRA Trainer：权重适配器架构中的 LoRA 训练节点
 - SaveLora 现在以与所有其他节点相同的文件名格式保存
 
 **开发者功能**
 - 添加对 sqlite 数据库的支持
 - 从 pyproject 自动注册 web 文件夹
-- 允许指定任何前端 semver 后缀
-- 添加 '@prerelease' 以使用最新测试前端
-- 允许从 pyproject.toml 添加额外设置
+- 允许指定任何 frontend semver 后缀
+- 添加 '@prerelease' 以使用最新测试版前端
+- 允许从 pyproject.toml 设置额外配置
 
-**错误修复 & 改进**
+**错误修复和改进**
 - 修复 WebcamCapture IS_CHANGED 签名
-- 修复 Kontext 宽高比仅作为小部件工作的问题
+- 修复 Kontext 宽高比仅作为 widget 工作的问题
 - 为 ltxv rmsnorm 添加正确的 eps
 - 允许使用 tokenizer_data 设置 min_length
-- 为 RF 泛化 SEEDS 采样器
-- RF 的多步 DPM++ SDE 采样器
+- 为 RF 通用化 SEEDS 采样器
+- 为 RF 添加多步 DPM++ SDE 采样器
 
 ### 新贡献者
 - @Olexandr88 首次贡献
 - @kmewhort 首次贡献
 
-**完整更新日志**: [v0.3.40...v0.3.41](https://github.com/comfyanonymous/ComfyUI/compare/v0.3.40...v0.3.41)
+**完整更新日志**：[v0.3.40...v0.3.41](https://github.com/comfyanonymous/ComfyUI/compare/v0.3.40...v0.3.41)
 
 </Update>
