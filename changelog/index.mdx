@@ -1,108 +1,81 @@
 ---
-
 title: "Changelog"
-
 description: "Track ComfyUI's latest features, improvements, and bug fixes"
-
 icon: "clock-rotate-left"
-
 ---
 
+<Update label="v1.0.0" description="June 25, 2025">
 
+## 🎉 ComfyUI 1.0.0 - Major Milestone Release!
 
-<Update label="v0.3.41" description="June 17, 2025">
+**Enhanced Flux Compatibility**
+- Chroma TE now works seamlessly with regular Flux models, expanding your creative possibilities with improved text encoding for better prompt understanding
 
+**Advanced Training Capabilities**
+- **LoRA Trainer Node**: Revolutionary in-ComfyUI LoRA training using weight adapter scheme - train custom LoRAs directly within your workflows without external tools
+- Streamlined training workflows for personalized model fine-tuning
 
+**Cutting-Edge Model Support**
+- **Cosmos Predict2 Integration**: Full support for both text-to-image (2B and 14B parameter models) and image-to-video generation
+- Access to state-of-the-art multimodal AI capabilities for comprehensive creative workflows
 
-## What's Changed
+**Developer & Performance Improvements**
+- SQLite database support for better data management and workflow persistence
+- Enhanced WebcamCapture node with improved real-time input handling
+- Optimized memory management and model loading
 
+**Workflow Impact**
+This milestone release significantly expands ComfyUI's capabilities, making it a complete AI creative suite. The addition of native LoRA training means you can now create, train, and deploy custom models entirely within ComfyUI workflows. Cosmos integration brings professional-grade video generation to your toolkit.
 
-
-**Chroma TE & Flux Improvements**
-
-- Let chroma TE work on regular flux
-
-- Fix black images on some flux models in fp16
-
-- Alternate fix for various flux-related issues
-
-
-
-**AMD GPU Enhancements**
-
-- Enable fp8 ops by default on gfx1201
-
-- Enable AMD fp8 and pytorch attention on some GPUs
-
-
-
-**Apple Silicon Fixes**
-
-- Apple most likely is never fixing the fp16 attention bug (implemented workaround)
-
-
-
-**New Model Support**
-
-- Support cosmos predict2 text to image 2B and 14B models
-
-- Support Cosmos predict2 image to video models
-
-- Uncap cosmos predict2 res and fix mem estimation
-
-- Add cosmos_rflow option to ModelSamplingContinuousEDM node
-
-
-
-**Training & LoRA**
-
-- LoRA Trainer: LoRA training node in weight adapter scheme
-
-- SaveLora now saves in the same filename format as all the other nodes
-
-
-
-**Developer Features**
-
-- Add support for sqlite database
-
-- Auto register web folder from pyproject
-
-- Allow specifying any frontend semver suffixes
-
-- Add '@prerelease' to use latest test frontend
-
-- Allow extra settings from pyproject.toml
-
-
-
-**Bug Fixes & Improvements**
-
-- Fix WebcamCapture IS_CHANGED signature
-
-- Fix Kontext aspect ratio only works as widget
-
-- Add correct eps to ltxv rmsnorm
-
-- Allow setting min_length with tokenizer_data
-
-- Generalize SEEDS samplers for RF
-
-- Multistep DPM++ SDE samplers for RF
-
-
-
-### New Contributors
-
-- @Olexandr88 made their first contribution
-
-- @kmewhort made their first contribution
-
-
-
-**Full Changelog**: [v0.3.40...v0.3.41](https://github.com/comfyanonymous/ComfyUI/compare/v0.3.40...v0.3.41)
-
-
+**Full Changelog**: [v0.3.40...1.0.0](https://github.com/comfyanonymous/ComfyUI/compare/v0.3.40...1.0.0)
 
 </Update>
 
+<Update label="v0.3.41" description="June 17, 2025">
+
+## What's Changed
+
+**Chroma TE & Flux Improvements**
+- Let chroma TE work on regular flux
+- Fix black images on some flux models in fp16
+- Alternate fix for various flux-related issues
+
+**AMD GPU Enhancements**
+- Enable fp8 ops by default on gfx1201
+- Enable AMD fp8 and pytorch attention on some GPUs
+
+**Apple Silicon Fixes**
+- Apple most likely is never fixing the fp16 attention bug (implemented workaround)
+
+**New Model Support**
+- Support cosmos predict2 text to image 2B and 14B models
+- Support Cosmos predict2 image to video models
+- Uncap cosmos predict2 res and fix mem estimation
+- Add cosmos_rflow option to ModelSamplingContinuousEDM node
+
+**Training & LoRA**
+- LoRA Trainer: LoRA training node in weight adapter scheme
+- SaveLora now saves in the same filename format as all the other nodes
+
+**Developer Features**
+- Add support for sqlite database
+- Auto register web folder from pyproject
+- Allow specifying any frontend semver suffixes
+- Add '@prerelease' to use latest test frontend
+- Allow extra settings from pyproject.toml
+
+**Bug Fixes & Improvements**
+- Fix WebcamCapture IS_CHANGED signature
+- Fix Kontext aspect ratio only works as widget
+- Add correct eps to ltxv rmsnorm
+- Allow setting min_length with tokenizer_data
+- Generalize SEEDS samplers for RF
+- Multistep DPM++ SDE samplers for RF
+
+### New Contributors
+- @Olexandr88 made their first contribution
+- @kmewhort made their first contribution
+
+**Full Changelog**: [v0.3.40...v0.3.41](https://github.com/comfyanonymous/ComfyUI/compare/v0.3.40...v0.3.41)
+
+</Update>
