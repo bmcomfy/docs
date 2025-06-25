@@ -1,54 +1,81 @@
 ---
 title: "更新日志"
-description: "跟踪 ComfyUI 的最新功能、改进和错误修复"
+description: "追踪ComfyUI的最新功能、改进和错误修复"
 icon: "clock-rotate-left"
 ---
+
+<Update label="v1.0.0" description="2025年6月25日">
+
+## 🎉 ComfyUI 1.0.0 - 重大里程碑版本！
+
+**增强的Flux兼容性**
+- Chroma TE现在可以与常规Flux模型无缝配合，通过改进的文本编码扩展您的创作可能性，实现更好的提示词理解
+
+**先进的训练功能**
+- **LoRA训练器节点**：革命性的ComfyUI内置LoRA训练，使用权重适配器方案 - 直接在您的工作流中训练自定义LoRA，无需外部工具
+- 为个性化模型微调提供简化的训练工作流
+
+**前沿模型支持**
+- **Cosmos Predict2集成**：全面支持文本到图像（2B和14B参数模型）和图像到视频生成
+- 获得最先进的多模态AI功能，打造全面的创意工作流
+
+**开发者和性能改进**
+- SQLite数据库支持，提供更好的数据管理和工作流持久化
+- 增强的WebcamCapture节点，改进实时输入处理
+- 优化内存管理和模型加载
+
+**工作流影响**
+这个里程碑版本显著扩展了ComfyUI的功能，使其成为完整的AI创意套件。原生LoRA训练的加入意味着您现在可以完全在ComfyUI工作流中创建、训练和部署自定义模型。Cosmos集成为您的工具包带来专业级的视频生成功能。
+
+**完整更新日志**：[v0.3.40...1.0.0](https://github.com/comfyanonymous/ComfyUI/compare/v0.3.40...1.0.0)
+
+</Update>
 
 <Update label="v0.3.41" description="2025年6月17日">
 
 ## 更新内容
 
-**Chroma TE & Flux 改进**
-- 让 chroma TE 在常规 flux 上工作
-- 修复某些 flux 模型在 fp16 下的黑色图像问题
-- 修复各种 flux 相关问题
+**Chroma TE与Flux改进**
+- 让Chroma TE在常规Flux上工作
+- 修复某些Flux模型在fp16下出现黑色图像的问题
+- 针对各种Flux相关问题的替代修复方案
 
-**AMD GPU 增强**
-- 在 gfx1201 上默认启用 fp8 操作
-- 在某些 GPU 上启用 AMD fp8 和 pytorch attention
+**AMD GPU增强**
+- 在gfx1201上默认启用fp8操作
+- 在某些GPU上启用AMD fp8和pytorch注意力机制
 
-**Apple Silicon 修复**
-- Apple 很可能永远不会修复 fp16 attention 错误（已实现解决方案）
+**Apple Silicon修复**
+- Apple很可能永远不会修复fp16注意力错误（已实现解决方案）
 
 **新模型支持**
-- 支持 cosmos predict2 文本到图像 2B 和 14B 模型
-- 支持 Cosmos predict2 图像到视频模型
-- 取消 cosmos predict2 分辨率限制并修复内存估算
-- 为 ModelSamplingContinuousEDM 节点添加 cosmos_rflow 选项
+- 支持Cosmos Predict2文本到图像2B和14B模型
+- 支持Cosmos Predict2图像到视频模型
+- 解除Cosmos Predict2分辨率限制并修复内存估算
+- 向ModelSamplingContinuousEDM节点添加cosmos_rflow选项
 
-**训练 & LoRA**
-- LoRA 训练器：权重适配器方案中的 LoRA 训练节点
-- SaveLora 现在以与所有其他节点相同的文件名格式保存
+**训练和LoRA**
+- LoRA训练器：权重适配器方案中的LoRA训练节点
+- SaveLora现在以与所有其他节点相同的文件名格式保存
 
 **开发者功能**
-- 添加对 sqlite 数据库的支持
-- 从 pyproject 自动注册 web 文件夹
-- 允许指定任何前端 semver 后缀
-- 添加 '@prerelease' 以使用最新测试前端
-- 允许从 pyproject.toml 添加额外设置
+- 添加SQLite数据库支持
+- 从pyproject自动注册web文件夹
+- 允许指定任何前端semver后缀
+- 添加'@prerelease'以使用最新测试前端
+- 允许从pyproject.toml添加额外设置
 
-**错误修复 & 改进**
-- 修复 WebcamCapture IS_CHANGED 签名
-- 修复 Kontext 宽高比仅作为小部件工作的问题
-- 为 ltxv rmsnorm 添加正确的 eps
-- 允许使用 tokenizer_data 设置 min_length
-- 为 RF 泛化 SEEDS 采样器
-- RF 的多步 DPM++ SDE 采样器
+**错误修复和改进**
+- 修复WebcamCapture IS_CHANGED签名
+- 修复Kontext宽高比仅作为小部件工作的问题
+- 向ltxv rmsnorm添加正确的eps
+- 允许使用tokenizer_data设置min_length
+- 为RF泛化SEEDS采样器
+- RF的多步DPM++ SDE采样器
 
 ### 新贡献者
 - @Olexandr88 首次贡献
 - @kmewhort 首次贡献
 
-**完整更新日志**: [v0.3.40...v0.3.41](https://github.com/comfyanonymous/ComfyUI/compare/v0.3.40...v0.3.41)
+**完整更新日志**：[v0.3.40...v0.3.41](https://github.com/comfyanonymous/ComfyUI/compare/v0.3.40...v0.3.41)
 
 </Update>
