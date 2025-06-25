@@ -1,54 +1,114 @@
 ---
+
 title: "更新日志"
+
 description: "跟踪 ComfyUI 的最新功能、改进和错误修复"
+
 icon: "clock-rotate-left"
+
 ---
 
-<Update label="v0.3.41" description="2025年6月17日">
+<Update label="2.0.0" description="2024年12月18日">
 
-## 更新内容
+## ComfyUI 2.0.0 - 重大版本发布
 
-**Chroma TE & Flux 改进**
-- 让 chroma TE 在常规 flux 上工作
-- 修复某些 flux 模型在 fp16 下的黑色图像问题
-- 修复各种 flux 相关问题
+**Flux 模型增强**
+- 增强了 Chroma TE 与常规 Flux 模型的兼容性，为图像生成工作流扩展了创意可能性
+- 改进了模型灵活性，让创作者能够尝试不同的 Flux 配置
 
-**AMD GPU 增强**
-- 在 gfx1201 上默认启用 fp8 操作
-- 在某些 GPU 上启用 AMD fp8 和 pytorch attention
+**高级训练功能**
+- **LoRA Trainer 节点**：革命性的 ComfyUI 内置 LoRA 训练，使用权重适配器方案 - 在工作流中直接训练自定义 LoRA，无需外部工具
+- 为研究人员和高级用户简化了模型微调流程
 
-**Apple Silicon 修复**
-- Apple 很可能永远不会修复 fp16 attention 错误（已实现解决方案）
+**Cosmos 模型集成**
+- **Cosmos Predict2 文本到图像**：完全支持 2B 和 14B 参数模型，将最先进的文本到图像生成功能带入 ComfyUI
+- **Cosmos 图像到视频**：原生支持 Cosmos 视频生成模型，实现无缝的图像到视频工作流
+- 为跨不同媒体类型工作的内容创作者扩展了多模态功能
 
-**新模型支持**
-- 支持 cosmos predict2 文本到图像 2B 和 14B 模型
-- 支持 Cosmos predict2 图像到视频模型
-- 取消 cosmos predict2 分辨率限制并修复内存估算
-- 为 ModelSamplingContinuousEDM 节点添加 cosmos_rflow 选项
+**基础设施改进**
+- **SQLite 数据库支持**：增强的数据管理和工作流持久化，提供更好的项目组织
+- 改进的后端架构，支持更复杂的工作流场景
 
-**训练 & LoRA**
-- LoRA 训练器：权重适配器方案中的 LoRA 训练节点
-- SaveLora 现在以与所有其他节点相同的文件名格式保存
+**开发者与工作流优势**
+- 修复了 WebcamCapture 节点的稳定性问题，改善实时输入工作流
+- 为自定义节点和扩展提供更好的集成能力
+- 增强了工作流可靠性和性能优化
 
-**开发者功能**
-- 添加对 sqlite 数据库的支持
-- 从 pyproject 自动注册 web 文件夹
-- 允许指定任何前端 semver 后缀
-- 添加 '@prerelease' 以使用最新测试前端
-- 允许从 pyproject.toml 添加额外设置
+这个重大版本显著扩展了 ComfyUI 在 AI 模型训练、多模态内容生成和工作流管理方面的能力 - 非常适合推动生成式 AI 边界的研究人员、内容创作者和 AI 艺术家。
 
-**错误修复 & 改进**
-- 修复 WebcamCapture IS_CHANGED 签名
-- 修复 Kontext 宽高比仅作为小部件工作的问题
-- 为 ltxv rmsnorm 添加正确的 eps
-- 允许使用 tokenizer_data 设置 min_length
-- 为 RF 泛化 SEEDS 采样器
-- RF 的多步 DPM++ SDE 采样器
+**完整更新日志**：[v0.3.40...2.0.0](https://github.com/comfyanonymous/ComfyUI/compare/v0.3.40...2.0.0)
 
-### 新贡献者
-- @Olexandr88 首次贡献
-- @kmewhort 首次贡献
+</Update>
+<Update label="v0.3.41" description="June 17, 2025">
 
-**完整更新日志**: [v0.3.40...v0.3.41](https://github.com/comfyanonymous/ComfyUI/compare/v0.3.40...v0.3.41)
+## What's Changed
+
+**Chroma TE & Flux Improvements**
+
+- Let chroma TE work on regular flux
+
+- Fix black images on some flux models in fp16
+
+- Alternate fix for various flux-related issues
+
+**AMD GPU Enhancements**
+
+- Enable fp8 ops by default on gfx1201
+
+- Enable AMD fp8 and pytorch attention on some GPUs
+
+**Apple Silicon Fixes**
+
+- Apple most likely is never fixing the fp16 attention bug (implemented workaround)
+
+**New Model Support**
+
+- Support cosmos predict2 text to image 2B and 14B models
+
+- Support Cosmos predict2 image to video models
+
+- Uncap cosmos predict2 res and fix mem estimation
+
+- Add cosmos_rflow option to ModelSamplingContinuousEDM node
+
+**Training & LoRA**
+
+- LoRA Trainer: LoRA training node in weight adapter scheme
+
+- SaveLora now saves in the same filename format as all the other nodes
+
+**Developer Features**
+
+- Add support for sqlite database
+
+- Auto register web folder from pyproject
+
+- Allow specifying any frontend semver suffixes
+
+- Add '@prerelease' to use latest test frontend
+
+- Allow extra settings from pyproject.toml
+
+**Bug Fixes & Improvements**
+
+- Fix WebcamCapture IS_CHANGED signature
+
+- Fix Kontext aspect ratio only works as widget
+
+- Add correct eps to ltxv rmsnorm
+
+- Allow setting min_length with tokenizer_data
+
+- Generalize SEEDS samplers for RF
+
+- Multistep DPM++ SDE samplers for RF
+
+### New Contributors
+
+- @Olexandr88 made their first contribution
+
+- @kmewhort made their first contribution
+
+**Full Changelog**: [v0.3.40...v0.3.41](https://github.com/comfyanonymous/ComfyUI/compare/v0.3.40...v0.3.41)
 
 </Update>
